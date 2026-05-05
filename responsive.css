@@ -1,0 +1,438 @@
+@media screen and (max-width: 768px) {
+
+    /* 1. CABECERA: Todo en una línea, sin saltos */
+    .top-bar-inner,
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 5px 4% !important;
+    }
+
+    .top-info {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        font-size: 9px !important;
+        /* Tamaño mini para que quepa en el ancho */
+    }
+
+    /* Ocultamos el icono de menú si los enlaces ya están visibles, 
+       o lo dejamos pequeño a la derecha */
+    .menu-toggle {
+        font-size: 24px !important;
+        margin-left: 10px;
+    }
+
+    /* 2. HERO: Párrafo IZQUIERDA, Mockup DERECHA (Igual que PC) */
+    .hero {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 20px 5% !important;
+        min-height: auto !important;
+        /* Elimina el espacio enorme vacío */
+        gap: 10px !important;
+    }
+
+    .hero-text {
+        width: 55% !important;
+        text-align: left !important;
+    }
+
+    .hero h1 {
+        font-size: 1.4rem !important;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        font-size: 0.85rem !important;
+        margin-bottom: 15px;
+    }
+
+    /* 3. MOCKUP Y BURBUJAS: Anclados a la derecha */
+    .mockup-container {
+        width: 40% !important;
+        position: relative !important;
+        margin: 0 !important;
+    }
+
+    .main-mockup {
+        width: 100% !important;
+        border-radius: 12px !important;
+    }
+
+    /* Burbujas pegadas a la foto, no volando por la pantalla */
+    .floating-img {
+        width: 30px !important;
+        height: 30px !important;
+        position: absolute !important;
+    }
+
+    .img-1 {
+        top: -5px;
+        left: -5px;
+    }
+
+    .img-2 {
+        right: -10px;
+        top: 40%;
+    }
+
+    .img-3 {
+        bottom: -5px;
+        left: 10%;
+    }
+
+    /* 4. SUBMENÚ: Debajo de "Servicios" sin romper el diseño */
+    .dropdown {
+        position: relative !important;
+    }
+
+    .dropdown-content {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 160px !important;
+        background: white !important;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+        display: none;
+        z-index: 1000;
+        padding: 5px 0 !important;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown.active .dropdown-content {
+        display: block !important;
+    }
+}
+
+/* Animación ajustada para que no empuje el texto */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* 1. EL CONTENEDOR DEL MENÚ (Lo que baja al darle a la X o hamburguesa) */
+    .nav-links {
+        display: none;
+        /* Se activa con la clase .active */
+        flex-direction: column !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: white !important;
+        padding: 30px 0 !important;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        z-index: 9999 !important;
+        text-align: center !important;
+        /* Centramos los textos principales */
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-links li {
+        width: 100% !important;
+        margin: 10px 0 !important;
+    }
+
+    /* 2. EL MALDITO SUBMENÚ (Servicios) */
+    .dropdown-content {
+        position: static !important;
+        /* IMPORTANTE: Lo obliga a quedarse debajo de "Servicios" */
+        width: 100% !important;
+        box-shadow: none !important;
+        /* Quitamos sombras raras en móvil */
+        background: #fdfdfd !important;
+        /* Un tono gris muy suave */
+        display: none;
+        /* Se activa al abrir Servicios */
+        padding: 0 !important;
+    }
+
+    /* Cuando el menú de servicios está abierto en móvil */
+    .dropdown.open .dropdown-content,
+    .dropdown:hover .dropdown-content {
+        display: block !important;
+    }
+
+    .dropdown-content a {
+        padding: 12px 0 !important;
+        font-size: 14px !important;
+        color: #666 !important;
+        border-bottom: 1px solid #eee !important;
+        width: 80% !important;
+        /* Para que no pegue a los bordes */
+        margin: 0 auto !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* 1. MOSTRAR LAS RAYITAS */
+    .menu-toggle {
+        display: block !important;
+        /* Fuerza a que aparezca */
+        font-size: 30px;
+        cursor: pointer;
+        color: var(--oscuro);
+    }
+
+    /* 2. OCULTAR EL MENÚ DE TEXTO (PC) */
+    .nav-links {
+        display: none;
+        /* Se esconde hasta que toques las rayitas */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    /* 3. CLASE PARA CUANDO SE ABRE (JS) */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    /* 4. ALINEACIÓN DE LA BARRA */
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+}
+
+/* --- RESPONSIVE CORTE DE CABALLERO (Para móvil) --- */
+@media screen and (max-width: 768px) {
+    .corte-section {
+        padding: 40px 5%;
+    }
+
+    .corte-container {
+        flex-direction: column;
+        /* En móvil se apila de forma natural */
+        gap: 30px;
+    }
+
+    .corte-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .corte-title {
+        font-size: 2rem;
+    }
+
+    .service-info {
+        font-size: 1rem;
+    }
+
+    .corte-image-container {
+        width: 100%;
+    }
+
+    .corte-image-wrapper {
+        max-width: 280px;
+        /* Tamaño controlado para móviles pequeños */
+    }
+
+    .corte-badge {
+        bottom: -10px;
+        left: -10px;
+        font-size: 0.7rem;
+    }
+
+    /* --- SECCIÓN CORTE: MANTENER IGUAL A PC EN MÓVIL --- */
+    .corte-container {
+        display: flex !important;
+        flex-direction: row !important;
+        /* PROHIBIDO APILAR: Se queda en fila */
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 15px !important;
+        /* Espacio más estrecho para que quepa todo */
+    }
+
+    /* Ajustamos el bloque de texto para que ocupe el 55% del ancho */
+    .corte-content {
+        width: 55% !important;
+        text-align: left !important;
+        /* Mantenemos alineación a la izquierda */
+    }
+
+    .corte-subtitle {
+        font-size: 0.75rem !important;
+        /* Un poco más pequeño */
+        margin-bottom: 5px !important;
+    }
+
+    .corte-title {
+        font-size: 1.4rem !important;
+        /* Escala de título para móvil */
+        margin-bottom: 10px !important;
+    }
+
+    .corte-description {
+        font-size: 0.8rem !important;
+        margin-bottom: 15px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Lista de precios compacta para móvil */
+    .corte-list li {
+        margin-bottom: 10px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .service-info {
+        font-size: 0.9rem !important;
+        /* Más pequeño para que no salte de línea */
+    }
+
+    .service-desc {
+        font-size: 0.75rem !important;
+    }
+
+    /* Ajustamos la imagen a la derecha (40% del ancho) */
+    .corte-image-container {
+        width: 40% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .corte-image-wrapper {
+        width: 100% !important;
+        max-width: 160px !important;
+        /* Límite de tamaño para que no empuje el texto */
+    }
+
+    .corte-img {
+        width: 100% !important;
+        border-radius: 12px !important;
+        /* Bordes ligeramente más suaves en móvil */
+    }
+
+    .corte-badge {
+        font-size: 0.65rem !important;
+        padding: 4px 8px !important;
+        bottom: -8px !important;
+        left: -8px !important;
+    }
+
+}
+
+/* --- RESPONSIVE PARA EL FOOTER (Mantiene el estilo de PC) --- */
+@media screen and (max-width: 768px) {
+
+    /* Eliminamos el centrado de texto y la columna única */
+    .footer-container {
+        flex-direction: row !important;
+        /* Mantiene las columnas de lado a lado */
+        flex-wrap: wrap !important;
+        /* Si no caben en pantallas muy pequeñas, bajan con gracia */
+        gap: 20px !important;
+    }
+
+    .footer-col {
+        text-align: left !important;
+        /* Mantiene la alineación a la izquierda de PC */
+        flex: 1 1 200px !important;
+        /* Permite que sigan pareciendo columnas independientes */
+    }
+
+    .footer-col ul li a,
+    .contacto-link {
+        justify-content: flex-start !important;
+        /* Iconos a la izquierda */
+    }
+
+    .social-links {
+        justify-content: flex-start !important;
+    }
+
+    .footer-bottom {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        text-align: left !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* SOLUCIÓN PUNTO 3: Ajuste exacto para que no se coma el inicio de las secciones al pulsar */
+    body {
+        padding-top: 130px !important;
+        /* El espacio exacto de tus dos barras en móvil */
+    }
+
+    /* Solución para que las secciones tengan un margen extra arriba al saltar a ellas */
+    section {
+        scroll-margin-top: 130px !important;
+        /* Evita que el menú fijo tape el título de la sección */
+    }
+
+    /* SOLUCIÓN PUNTO 2: Permitir scroll vertical en el menú móvil si es muy largo */
+    .nav-links {
+        max-height: calc(100vh - 130px) !important;
+        /* Limita la altura al tamaño de la pantalla */
+        overflow-y: auto !important;
+        /* Permite arrastrar y desplazar con el dedo si no cabe */
+        -webkit-overflow-scrolling: touch !important;
+        /* Suavidad táctil en iPhones/iOS */
+    }
+}
+
+/* --- SOLO ADELGAZAR LA BARRA SUPERIOR EN MÓVIL --- */
+@media screen and (max-width: 768px) {
+
+    /* Hacemos la barra superior muy estrecha */
+    .top-bar {
+        padding: 5px 5% !important;
+        /* Padding mínimo para que sea fina */
+    }
+
+    .top-bar-inner {
+        flex-direction: row !important;
+        /* Mantenemos todo en una sola línea horizontal */
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    /* Reducimos el tamaño de los iconos y textos para que quepan de lado */
+    .top-info {
+        display: flex !important;
+        gap: 10px !important;
+        font-size: 0.75rem !important;
+        /* Letra más pequeña para que entre en una línea */
+    }
+
+    .top-logo img {
+        height: 30px !important;
+        /* El logo de las tijeras más bajito */
+    }
+
+    /* Ajustamos el body para la nueva altura total de la cabecera en móvil */
+    body {
+        padding-top: 110px !important;
+        /* El espacio justo para que no tape nada */
+    }
+}

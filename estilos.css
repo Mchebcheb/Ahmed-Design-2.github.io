@@ -1,0 +1,871 @@
+:root {
+    --dorado: #c5a059;
+    --fondo: #f4f1ea;
+    --oscuro: #2c2c2c;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--fondo);
+    color: var(--oscuro);
+    overflow-x: hidden;
+}
+
+
+
+/* 1. Clavamos todo el bloque del header arriba de la pantalla */
+header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+    /* Evita que las fotos o el mapa lo tapen */
+}
+
+/* 2. Tu menú se mantiene limpio y fluido */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: var(--blanco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 3. Evitamos que el menú tape el inicio de la web */
+body {
+    padding-top: 140px !important;
+    /* Empuja el contenido hacia abajo el tamaño justo de la barra */
+}
+
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--oscuro);
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--dorado);
+}
+
+
+/* Submenú Escritorio */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--blanco);
+    top: 100%;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    pointer-events: auto !important;
+}
+
+.dropdown-content.active {
+    display: block !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 8%;
+    min-height: 80vh;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero h1 span {
+    color: var(--dorado);
+}
+
+.btn-main {
+    display: inline-block;
+    background: var(--oscuro);
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background: var(--dorado);
+}
+
+/* Animaciones */
+.mockup-container {
+    position: relative;
+    width: 500px;
+    margin-right: -80px;
+
+}
+
+.main-mockup {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.floating-img {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid rgb(248, 187, 240);
+    overflow: hidden;
+    animation: float 4s ease-in-out infinite;
+}
+
+.img-1 {
+    top: -20px;
+    left: -30px;
+}
+
+.img-2 {
+    top: 40%;
+    right: -40px;
+    animation-delay: 1s;
+}
+
+.img-3 {
+    bottom: -10px;
+    left: 10px;
+    animation-delay: 2s;
+}
+
+/* Esto fuerza a la imagen a ocupar todo el círculo */
+.floating-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 50%;
+    /* Por si acaso */
+}
+
+/* Asegúrate de que el contenedor tenga tamaño, si no, la imagen no se ve */
+.floating-img {
+    overflow: hidden;
+    /* Corta lo que sobre de la foto */
+    background-color: #eee;
+    /* Si ves gris, es que la ruta de la foto sigue mal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    font-size: 24px;
+    /* Ajusta el tamaño a tu gusto */
+    font-weight: bold;
+    /* Para que destaque como un logo */
+    color: #333;
+    /* Usa el color principal de tu web */
+    text-transform: uppercase;
+    /* Opcional: para que se vea más serio */
+    letter-spacing: 1px;
+    /* Un poco de espacio entre letras queda más elegante */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* Asegura que el texto esté centrado verticalmente */
+}
+
+/* 1. La barra completa */
+.top-bar {
+    background-color: #faf9f6;
+    /* Un gris muy clarito para diferenciarlo del menú */
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* 2. El contenedor que alinea los dos lados */
+.top-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    /* Logo a la izquierda, info a la derecha */
+    align-items: center;
+    max-width: 1200px;
+    /* O el ancho que uses en tu web */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 3. Estilo para el grupo de iconos/links */
+.top-info {
+    display: flex;
+    gap: 20px;
+    /* Espacio entre teléfono, mapa y mail */
+}
+
+.info-item a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.info-item a:hover {
+    color: #000;
+    /* Se oscurece al pasar el ratón */
+}
+
+/* 4. Ajuste del logo para que no empuje nada */
+.top-logo img {
+    display: block;
+    object-fit: contain;
+}
+
+/* El cuadro del submenú */
+.navbar .dropdown-content {
+    /* Ajusta el nombre de la clase si usas otro */
+    background-color: #ffffff;
+    min-width: 200px;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para que flote */
+    border: 1px solid #eee;
+}
+
+/* Cada servicio individual */
+.navbar .dropdown-content a {
+    color: #444;
+    padding: 12px 20px;
+    /* Aquí está el truco: más espacio arriba y abajo */
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f9f9f9;
+    /* Una línea muy fina entre servicios */
+}
+
+/* El último servicio no lleva línea debajo */
+.navbar .dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Efecto al pasar el ratón */
+.navbar .dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #b38b59;
+    /* El color dorado/bronce que usas en el texto */
+    padding-left: 25px;
+    /* Se mueve un poco a la derecha al señalarlo, queda muy pro */
+}
+
+h1 span {
+    color: #b38b59;
+    /* El tono dorado/bronce de tu diseño */
+    font-weight: 700;
+    /* Lo hace un poco más negrita que el resto */
+    display: inline-block;
+    /* Permite que el navegador lo maneje mejor visualmente */
+}
+
+.top-logo img {
+    height: 65px;
+    /* Más grande para que se vea bien el detalle */
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+    /* Le da relieve */
+    transition: transform 0.3s ease;
+    display: block;
+    margin-top: -5px;
+    /* Para ajustarlo si se ve muy abajo */
+}
+
+.top-logo img:hover {
+    transform: scale(1.1);
+    /* Un pequeño salto al pasar el ratón para que parezca "vivo" */
+}
+
+/* Ajustamos el contenedor del logo para que no lo corte */
+.top-logo {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.dropdown {
+    position: relative;
+    /* Esto es el ancla. El submenú ahora sabrá de dónde colgarse */
+    display: inline-block;
+    /* O 'block' según tu diseño, pero que mantenga su sitio */
+}
+
+/* --- SECCIÓN CORTE DE CABALLERO --- */
+.corte-section {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    /* Fondo limpio para contrastar con el beige del hero */
+}
+
+.corte-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Lado del contenido */
+.corte-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.corte-subtitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9f8a61;
+    /* Color dorado/marrón sutil acorde al diseño */
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.corte-title {
+    font-size: 2.5rem;
+    color: var(--oscuro, #1a1a1a);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.corte-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Lista de precios */
+.corte-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+}
+
+.corte-list li {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.corte-list li:last-child {
+    border-bottom: none;
+}
+
+.service-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--oscuro, #1a1a1a);
+    margin-bottom: 5px;
+}
+
+.service-price {
+    color: #9f8a61;
+}
+
+.service-desc {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+}
+
+/* Lado de la imagen */
+.corte-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.corte-image-wrapper {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+}
+
+.corte-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.corte-badge {
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    background: #9f8a61;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(159, 138, 97, 0.3);
+}
+
+/* Clase para dar un tono de fondo ligeramente diferente a secciones alternas */
+.bg-alternativo {
+    background-color: #faf8f5 !important;
+    /* Un beige/gris crema muy suave */
+}
+
+/* Hover simple para las imágenes de los servicios */
+.corte-img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.corte-img:hover {
+    transform: scale(1.05);
+    /* Zoom sutil del 5% */
+    opacity: 0.9;
+    /* Se aclara ligeramente */
+}
+
+/* Hover simple para tu mockup principal */
+.main-mockup {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.main-mockup:hover {
+    transform: scale(1.03);
+    /* Zoom un poco más suave para que no descuadre */
+    opacity: 0.95;
+}
+
+/* --- SECCIÓN CONTACTO COMPACTA --- */
+.contacto-section {
+    padding: 80px 20px !important;
+    background-color: #e7e2e2 !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.contacto-container {
+    width: 100% !important;
+    max-width: 550px !important;
+    /* Limita el ancho para que ocupe menos pantalla */
+    text-align: center !important;
+}
+
+.contacto-subtitle {
+    display: block !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: #c5a880 !important;
+    /* Tono dorado/barbería */
+    margin-bottom: 10px !important;
+}
+
+.contacto-title {
+    font-size: 2.2rem !important;
+    margin: 0 0 15px 0 !important;
+    color: #111111 !important;
+}
+
+.contacto-description {
+    font-size: 1rem !important;
+    color: #666666 !important;
+    margin-bottom: 40px !important;
+    line-height: 1.6 !important;
+}
+
+/* Estilos del formulario */
+.contacto-form {
+    text-align: left !important;
+    /* Los campos alineados a la izquierda */
+}
+
+.contacto-group {
+    margin-bottom: 20px !important;
+}
+
+.contacto-group label {
+    display: block !important;
+    font-size: 0.85rem !important;
+    font-weight: bold !important;
+    margin-bottom: 8px !important;
+    color: #1a1a1a !important;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100% !important;
+    padding: 12px 15px !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    font-size: 0.95rem !important;
+    background-color: #fafafa !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    outline: none !important;
+    border-color: #1a1a1a !important;
+    background-color: #ffffff !important;
+}
+
+/* Botón de envío */
+.btn-contacto {
+    width: 100% !important;
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 14px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
+}
+
+.btn-contacto:hover {
+    background-color: #c5a880 !important;
+    /* Cambio de color al pasar el cursor */
+    transform: translateY(-2px) !important;
+}
+
+/* --- ESTILOS DEL FOOTER GENERAL --- */
+.footer {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    padding: 60px 20px 30px 20px !important;
+    font-family: 'Arial', sans-serif !important;
+}
+
+.footer-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 40px !important;
+}
+
+/* Columnas individuales */
+.footer-col {
+    flex: 1 !important;
+    min-width: 200px !important;
+}
+
+.footer-col h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 20px !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+}
+
+/* Columna 1: Enlaces de Menú */
+.footer-col ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px !important;
+}
+
+.footer-col ul li a {
+    color: #aaaaaa !important;
+    text-decoration: none !important;
+    font-size: 0.95rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-col ul li a:hover {
+    color: #c5a880 !important;
+    /* Tono dorado/destacado */
+}
+
+/* Columna 2: Contacto y Enlaces */
+.contacto-link {
+    color: #aaaaaa !important;
+    text-decoration: none !important;
+    font-size: 0.95rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 15px !important;
+    line-height: 1.4 !important;
+    transition: color 0.3s ease !important;
+}
+
+.contacto-link:hover {
+    color: #ffffff !important;
+}
+
+.contacto-link i {
+    font-size: 1.1rem !important;
+    color: #c5a880 !important;
+}
+
+/* Redes Sociales */
+.social-links {
+    display: flex !important;
+    gap: 12px !important;
+    margin-top: 20px !important;
+}
+
+.social-links a {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    background-color: #222222 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 1.2rem !important;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+.social-links a:hover {
+    background-color: #c5a880 !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Columna 3: Horarios */
+.opening-hours p {
+    margin: 0 0 4px 0 !important;
+    color: #ffffff !important;
+    font-size: 0.95rem !important;
+}
+
+.opening-hours span {
+    display: block !important;
+    color: #aaaaaa !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 12px !important;
+}
+
+/* Columna 4: Newsletter/Boletín */
+.footer-col p {
+    color: #aaaaaa !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+.newsletter-form {
+    display: flex !important;
+    gap: 5px !important;
+    width: 100% !important;
+}
+
+.newsletter-form input {
+    flex: 1 !important;
+    padding: 10px 12px !important;
+    border: 1px solid #333333 !important;
+    background-color: #222222 !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    font-size: 0.9rem !important;
+}
+
+.newsletter-form input:focus {
+    outline: none !important;
+    border-color: #c5a880 !important;
+}
+
+.newsletter-form button {
+    background-color: #c5a880 !important;
+    color: #111111 !important;
+    border: none !important;
+    padding: 10px 15px !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    font-size: 0.85rem !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.newsletter-form button:hover {
+    background-color: #ffffff !important;
+}
+
+/* --- PARTE INFERIOR DEL FOOTER --- */
+.footer-bottom {
+    max-width: 1100px !important;
+    margin: 40px auto 0 auto !important;
+    padding-top: 25px !important;
+    border-top: 1px solid #222222 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+}
+
+.footer-bottom p {
+    color: #666666 !important;
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+}
+
+.footer-links {
+    display: flex !important;
+    gap: 20px !important;
+}
+
+.footer-links a {
+    color: #666666 !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-links a:hover {
+    color: #c5a880 !important;
+}
+
+/* ==========================================
+   TOQUES FINALES: COLORES FIJOS EN REDES Y COLOR EN MENÚ
+   ========================================== */
+
+/* 1. MENÚ DEL FOOTER: Color y Movimiento al pasar el ratón (Hover) */
+.footer-col ul li a {
+    transition: transform 0.3s ease, color 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    color: #aaaaaa !important;
+    /* Color gris suave por defecto */
+}
+
+/* Al pasar el ratón por encima, se mueve y cambia a color dorado elegante */
+.footer-col ul li a:hover {
+    transform: translateX(8px) !important;
+    /* Se desliza 8px a la derecha */
+    color: #f4f805 !important;
+    /* Color dorado brillante al hacer hover */
+}
+
+
+/* 2. REDES SOCIALES: Colores auténticos fijos (sin esperar al hover) */
+.social-links a {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    color: #ffffff !important;
+    /* Iconos en blanco */
+    text-decoration: none !important;
+    font-size: 1.2rem !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Color permanente para FACEBOOK (Azul Oficial) */
+.social-links a:has(.bxl-facebook-circle) {
+    background-color: #1877F2 !important;
+}
+
+/* Color permanente para INSTAGRAM (Degradado Oficial) */
+.social-links a:has(.bxl-instagram) {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
+
+/* Color permanente para WHATSAPP (Verde Oficial) */
+.social-links a:has(.bxl-whatsapp) {
+    background-color: #25D366 !important;
+}
+
+/* Color permanente para LINKEDIN (Azul Profesional) */
+.social-links a:has(.bxl-linkedin-square) {
+    background-color: #0077B5 !important;
+}
+
+/* Al pasar el ratón por encima de las redes, solo flotan un poco */
+.social-links a:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Reduce la altura de la barra superior de contacto para que quede más fina y elegante */
+.top-bar {
+    background: #f9f7f4 !important;
+    /* Mantiene ese tono crema tan limpio */
+    padding: 6px 8% !important;
+    /* Reducimos el padding para que sea más estrecha */
+    border-bottom: 1px solid #eae7e2 !important;
+}
+
+.top-bar-inner {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+/* Ajusta el tamaño del icono de las tijeras en la barra de arriba */
+.top-logo img {
+    height: 35px !important;
+    /* Un pelín más pequeño para que la barra quede fina */
+    width: auto !important;
+}
+
+/* El menú principal (.navbar) */
+.navbar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 8% !important;
+    /* Espaciado perfecto para que no ocupe demasiada pantalla al bajar */
+    background: var(--blanco) !important;
+}

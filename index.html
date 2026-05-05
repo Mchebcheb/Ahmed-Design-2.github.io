@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ahmed Design: Desarrollador web profesional al antojo del cliente.">
+    <title>Ahmed Design | New New Page</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contenedor top-bar-inner">
+                <div class="top-logo">
+                    <img src="logo peluqueria.png" alt="Logo" style="height: 50px;">
+                </div>
+                <div class="top-info">
+                    <div class="info-item"><a href="tel:+212614738881">📱 +212 614 738 881</a></div>
+                    <div class="info-item"><a href="https://maps.google.com" target="_blank">📍 Ksar el Kebir</a></div>
+                    <div class="info-item"><a href="mailto:mchebcheb2019@gmail.com">📧 mchebcheb2019@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Ahmed <span>Design</span></h1>
+            </div>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Servicios <i class='bx bx-chevron-down'></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#corte-caballero">Corte Caballero</a></li>
+                        <li><a href="#barberia-pro">Barbería Pro</a></li>
+                        <li><a href="#afeitado-tradicional">Afeitado Tradicional</a></li>
+                        <li><a href="#arreglo-barba">Arreglo de Barba</a></li>
+                        <li><a href="#tinte-color">Tinte y Color</a></li>
+                        <li><a href="#tratamiento-capilar">Tratamiento Capilar</a></li>
+                        <li><a href="#corte-infantil">Corte Infantil</a></li>
+                    </ul>
+                </li>
+                <li><a href="reservar.html">Reservar</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Estilo que <span>fluye</span></h1>
+            <p>Diseño capilar avanzado para clientes exigentes.</p>
+            <a href="reservar.html" class="btn-main">Pedi tu cita</a>
+        </div>
+
+        <div class="mockup-container">
+            <img src="mockup-peluqueria.png" alt="Peluquería" class="main-mockup">
+            <div class="floating-img img-1"><img src="corte1.jpg" alt="1"></div>
+            <div class="floating-img img-2"><img src="corte2.jpg" alt="2"></div>
+            <div class="floating-img img-3"><img src="corte3.jpg" alt="3"></div>
+        </div>
+    </section>
+    <section id="corte-caballero" class="corte-section">
+        <div class="corte-container">
+            <div class="corte-content">
+                <span class="corte-subtitle">Servicios Premium</span>
+                <h2 class="corte-title">Corte de Caballero</h2>
+                <p class="corte-description">
+                    Un buen corte no es solo cuestión de tijeras, es cuestión de estilo y personalidad. Nos tomamos el
+                    tiempo para asesorarte y encontrar el look que mejor se adapta a tus facciones.
+                </p>
+
+                <ul class="corte-list">
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Corte Clásico / Moderno</span>
+                            <span class="service-price">15€</span>
+                        </div>
+                        <p class="service-desc">Lavado, asesoramiento de estilo, corte a tijera o máquina y peinado con
+                            producto premium.</p>
+                    </li>
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Arreglo de Barba Completo</span>
+                            <span class="service-price">10€</span>
+                        </div>
+                        <p class="service-desc">Perfilado, rebajado, hidratación con aceites y toalla caliente para el
+                            máximo confort.</p>
+                    </li>
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Combo: Corte + Barba</span>
+                            <span class="service-price">22€</span>
+                        </div>
+                        <p class="service-desc">El servicio completo para renovar tu imagen por completo.</p>
+                    </li>
+                </ul>
+
+                <a href="reservar.html" class="btn-main">Reservar Cita</a>
+            </div>
+
+            <div class="corte-image-container">
+                <div class="corte-image-wrapper">
+                    <img src="foto-corte.jpg" alt="Corte Caballero" class="corte-img">
+                    <div class="corte-badge">Premium Care</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="barberia-pro" class="corte-section bg-alternativo">
+        <div class="corte-container cruzado">
+            <div class="corte-image-container">
+                <div class="corte-image-wrapper">
+                    <img src="barberia-pro.jpg" alt="Barbería Pro" class="corte-img">
+                    <div class="corte-badge">Barbería Pro</div>
+                </div>
+            </div>
+
+            <div class="corte-content">
+                <span class="corte-subtitle">Estilo & Cuidado</span>
+                <h2 class="corte-title">Barbería Pro</h2>
+                <p class="corte-description">
+                    Cuidamos de tu barba con técnicas de barbería clásica y productos de alta gama. Un ritual pensado
+                    para esculpir, hidratar y definir tu estilo de forma impecable.
+                </p>
+
+                <ul class="corte-list">
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Perfilado de Barba Express</span>
+                            <span class="service-price">10€</span>
+                        </div>
+                        <p class="service-desc">Arreglo rápido a máquina y maquinilla, perfilado de líneas y aceite
+                            hidratante.</p>
+                    </li>
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Ritual de Barba Completo</span>
+                            <span class="service-price">18€</span>
+                        </div>
+                        <p class="service-desc">Corte con diseño adaptado, toallas calientes, masaje facial y
+                            tratamiento de hidratación profunda.</p>
+                    </li>
+                </ul>
+
+                <a href="reservar.html" class="btn-main">Reservar Servicio</a>
+            </div>
+        </div>
+    </section>
+    <section id="afeitado-tradicional" class="corte-section">
+        <div class="corte-container">
+            <div class="corte-content">
+                <span class="corte-subtitle">Experiencia Clásica</span>
+                <h2 class="corte-title">Afeitado Tradicional</h2>
+                <p class="corte-description">
+                    Recuperamos el ritual clásico con navaja, brocha de pelo de tejón y espuma caliente. Un momento de
+                    relajación absoluta para un apurado perfecto y una piel cuidada.
+                </p>
+
+                <ul class="corte-list">
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Afeitado Navaja Completo</span>
+                            <span class="service-price">12€</span>
+                        </div>
+                        <p class="service-desc">Ritual con toalla caliente, ablandador de barba, afeitado a navaja y
+                            bálsamo calmante.</p>
+                    </li>
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Diseño de Patillas & Cuello</span>
+                            <span class="service-price">6€</span>
+                        </div>
+                        <p class="service-desc">Limpieza de contornos a navaja para mantener tu corte impecable por más
+                            tiempo.</p>
+                    </li>
+                </ul>
+
+                <a href="reservar.html" class="btn-main">Pedir Cita</a>
+            </div>
+
+            <div class="corte-image-container">
+                <div class="corte-image-wrapper">
+                    <img src="afeitado-tradicional.jpg" alt="Afeitado Tradicional" class="corte-img">
+                    <div class="corte-badge">Ritual Navaja</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="arreglo-barba" class="corte-section bg-alternativo">
+        <div class="corte-container cruzado">
+            <div class="corte-image-container">
+                <div class="corte-image-wrapper">
+                    <img src="arreglo-barba.jpg" alt="Arreglo de Barba" class="corte-img">
+                    <div class="corte-badge">Cuidado de Barba</div>
+                </div>
+            </div>
+
+            <div class="corte-content">
+                <span class="corte-subtitle">Diseño & Perfilado</span>
+                <h2 class="corte-title">Arreglo de Barba</h2>
+                <p class="corte-description">
+                    Mantén tu barba impecable y con la forma perfecta. Definimos tus líneas del cuello y mejillas
+                    adaptándonos a la forma de tu rostro y aplicando hidratación profesional.
+                </p>
+
+                <ul class="corte-list">
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Perfilado & Rebaje</span>
+                            <span class="service-price">10€</span>
+                        </div>
+                        <p class="service-desc">Arreglo a máquina y tijera, definición de contornos y aplicación de
+                            bálsamo.</p>
+                    </li>
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Arreglo con Toalla Caliente</span>
+                            <span class="service-price">14€</span>
+                        </div>
+                        <p class="service-desc">El servicio completo de perfilado acompañado de toalla húmeda caliente
+                            para abrir los poros y masajes con aceites esenciales.</p>
+                    </li>
+                </ul>
+
+                <a href="reservar.html" class="btn-main">Reservar Ahora</a>
+            </div>
+        </div>
+    </section>
+    <section id="tinte-color" class="corte-section">
+        <div class="corte-container">
+            <div class="corte-content">
+                <span class="corte-subtitle">Cambio de Look</span>
+                <h2 class="corte-title">Tinte y Color</h2>
+                <p class="corte-description">
+                    ¿Buscas cubrir canas de forma natural o quieres un cambio radical de estilo? Utilizamos coloraciones
+                    de alta calidad que respetan la salud de tu cuero cabelludo y aportan brillo.
+                </p>
+
+                <ul class="corte-list">
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Cobertura de Canas (Color)</span>
+                            <span class="service-price">20€</span>
+                        </div>
+                        <p class="service-desc">Aplicación de tinte clásico o baño de color para un acabado uniforme y
+                            natural.</p>
+                    </li>
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Matiz / Camuflaje de Canas</span>
+                            <span class="service-price">15€</span>
+                        </div>
+                        <p class="service-desc">Tratamiento rápido que disimula las canas de forma sutil sin efecto
+                            raíz.</p>
+                    </li>
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Decoloración & Tonos Fantasía</span>
+                            <span class="service-price">A consultar</span>
+                        </div>
+                        <p class="service-desc">Trabajos técnicos personalizados para cambios de color más extremos.</p>
+                    </li>
+                </ul>
+
+                <a href="reservar.html" class="btn-main">Consultar Servicio</a>
+            </div>
+
+            <div class="corte-image-container">
+                <div class="corte-image-wrapper">
+                    <img src="tinte-color.jpg" alt="Tinte y Color" class="corte-img">
+                    <div class="corte-badge">Color Pro</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tratamiento-capilar" class="corte-section bg-alternativo">
+        <div class="corte-container cruzado">
+            <div class="corte-image-container">
+                <div class="corte-image-wrapper">
+                    <img src="tratamiento-capilar.jpg" alt="Tratamiento Capilar" class="corte-img">
+                    <div class="corte-badge">Salud Capilar</div>
+                </div>
+            </div>
+
+            <div class="corte-content">
+                <span class="corte-subtitle">Cuidado Profundo</span>
+                <h2 class="corte-title">Tratamiento Capilar</h2>
+                <p class="corte-description">
+                    La salud de tu cabello empieza en el cuero cabelludo. Ofrecemos tratamientos específicos para
+                    combatir la caída, regular la grasa o eliminar la caspa, devolviendo la fuerza y el brillo natural a
+                    tu pelo.
+                </p>
+
+                <ul class="corte-list">
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Tratamiento Anticaída / Fortalecedor</span>
+                            <span class="service-price">18€</span>
+                        </div>
+                        <p class="service-desc">Masaje estimulante con loción concentrada para activar la circulación y
+                            fortalecer la raíz.</p>
+                    </li>
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Exfoliación & Detox Capilar</span>
+                            <span class="service-price">15€</span>
+                        </div>
+                        <p class="service-desc">Limpieza profunda del cuero cabelludo para eliminar impurezas, residuos
+                            de productos y exceso de grasa.</p>
+                    </li>
+                </ul>
+
+                <a href="reservar.html" class="btn-main">Pedir Cita</a>
+            </div>
+        </div>
+    </section>
+    <section id="corte-infantil" class="corte-section">
+        <div class="corte-container">
+            <div class="corte-content">
+                <span class="corte-subtitle">Para los más Pequeños</span>
+                <h2 class="corte-title">Corte Infantil</h2>
+                <p class="corte-description">
+                    Hacemos que el corte de pelo de los más pequeños sea una experiencia divertida y sin estrés. Tenemos
+                    la paciencia, el tacto y el estilo que ellos buscan para lucir su mejor versión.
+                </p>
+
+                <ul class="corte-list">
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Corte Niño (Hasta 12 años)</span>
+                            <span class="service-price">12€</span>
+                        </div>
+                        <p class="service-desc">Corte adaptado, lavado rápido opcional y peinado con cera suave para
+                            salir listos.</p>
+                    </li>
+                    <li>
+                        <div class="service-info">
+                            <span class="service-name">Primer Corte de Pelo</span>
+                            <span class="service-price">10€</span>
+                        </div>
+                        <p class="service-desc">Un servicio con un trato súper cercano y paciente para que su primera
+                            experiencia sea perfecta.</p>
+                    </li>
+                </ul>
+
+                <a href="reservar.html" class="btn-main">Pedir Cita</a>
+            </div>
+
+            <div class="corte-image-container">
+                <div class="corte-image-wrapper">
+                    <img src="corte-infantil.jpg" alt="Corte Infantil" class="corte-img">
+                    <div class="corte-badge">Kids Style</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="contacto-section">
+        <div class="contacto-container">
+            <span class="contacto-subtitle">¿Tienes alguna duda?</span>
+            <h2 class="contacto-title">Contacto</h2>
+            <p class="contacto-description">
+                Escríbenos para cualquier consulta, sugerencia o duda sobre nuestros servicios. Te responderemos lo
+                antes posible.
+            </p>
+
+            <form action="https://formspree.io/f/xnjlzeap" method="POST" class="contacto-form">
+                <div class="contacto-group">
+                    <label for="c-nombre">Nombre</label>
+                    <input type="text" id="c-nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="contacto-group">
+                    <label for="c-email">Correo Electrónico</label>
+                    <input type="email" id="c-email" name="email" placeholder="tu@correo.com" required>
+                </div>
+
+                <div class="contacto-group">
+                    <label for="c-mensaje">Mensaje</label>
+                    <textarea id="c-mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn-contacto">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    <section id="seccion-mapa" class="mapa-full">
+        <div class="mapa-wrapper">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26168.328325983796!2d-5.926524333649646!3d35.002880789723046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0bc3021f1e0001%3A0x6b866c1b4b0e5c9b!2sKsar%20el-Kebir%2C%20Marruecos!5e0!3m2!1ses!2ses!4v1680000000000!5m2!1ses!2ses"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Menú —</h3>
+                <ul>
+                    <li><a href="index.html"><i class='bx bx-chevron-right'></i> Inicio</a></li>
+                    <li><a href="#corte-caballero"><i class='bx bx-chevron-right'></i> Servicios</a></li>
+                    <li><a href="reservar.html"><i class='bx bx-chevron-right'></i> Reservar</a></li>
+                    <li><a href="#contacto"><i class='bx bx-chevron-right'></i> Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contacto —</h3>
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Ksar+el-Kebir" target="_blank"
+                        class="contacto-link">
+                        <i class='bx bxs-map'></i> Calle Principal, Ksar el-Kebir
+                    </a>
+                </p>
+                <p>
+                    <a href="tel:+21261473881" class="contacto-link">
+                        <i class='bx bxs-phone'></i> +212 614 73 88 81
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:mchebcheb2019@gmail.com" class="contacto-link">
+                        <i class='bx bxs-envelope'></i> mchebcheb2019@gmail.com
+                    </a>
+                </p>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Ahmed.Chahmout.1088893" target="_blank"><i
+                            class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://www.instagram.com/mchebcheb2019/" target="_blank"><i
+                            class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/212614738881?text=Hola%20Ahmed" target="_blank"><i
+                            class='bx bxl-whatsapp'></i></a>
+                    <a href="https://www.linkedin.com/in/ahmed-chahmout-1a87723b5" target="_blank"><i
+                            class='bx bxl-linkedin-square'></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Horario —</h3>
+                <div class="opening-hours">
+                    <p><strong>Lunes - Viernes:</strong></p>
+                    <span>09:00 - 19:00</span>
+                    <p><strong>Sábados:</strong></p>
+                    <span>10:00 - 14:00</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Boletín —</h3>
+                <p>Suscríbete para recibir novedades sobre diseño y tecnología.</p>
+                <form action="https://formspree.io/f/xnjlzeap" method="POST" class="newsletter-form">
+                    <input type="email" name="email" placeholder="Tu correo" required>
+                    <button type="submit">UNIRSE</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Ahmed Design. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="privacidad.html">Privacidad</a>
+                <a href="cookies.html">Cookies</a>
+            </div>
+        </div>
+    </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

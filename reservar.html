@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cita - Barbería</title>
+    <style>
+        /* Estilos rápidos para que el formulario se vea espectacular y limpio */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #faf8f5;
+            color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            background: #fdfdfd;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #1a1a1a;
+        }
+
+        .btn-submit {
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #444;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Enlace de volver al inicio en azul negrita */
+        .back-link {
+            display: block !important;
+            text-align: center !important;
+            margin-top: 25px !important;
+            color: #0056b3 !important;
+            /* Azul elegante */
+            font-weight: bold !important;
+            /* Texto en negrita */
+            text-decoration: none !important;
+            font-size: 0.9rem !important;
+            transition: color 0.3s ease, transform 0.3s ease !important;
+        }
+
+        /* Efecto hover al pasar el ratón */
+        .back-link:hover {
+            color: #003d80 !important;
+            /* Azul más oscuro */
+            transform: translateX(-4px) !important;
+            /* Se desplaza sutilmente hacia la izquierda */
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Reserva tu Cita</h2>
+        <p>Introduce tus datos y nos pondremos en contacto contigo para confirmar la hora.</p>
+
+        <form action="https://formspree.io/f/xnjlzeap" method="POST">
+
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ej. juan@correo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono de Contacto</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej. 600 000 000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="servicio">Selecciona el Servicio</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="" disabled selected>Elige un servicio...</option>
+                    <option value="Corte Caballero">Corte Caballero - 15€</option>
+                    <option value="Barberia Pro">Barbería Pro (Ritual Completo) - 18€</option>
+                    <option value="Afeitado Tradicional">Afeitado Tradicional - 12€</option>
+                    <option value="Arreglo de Barba">Arreglo de Barba - 10€</option>
+                    <option value="Tinte y Color">Tinte y Color</option>
+                    <option value="Tratamiento Capilar">Tratamiento Capilar</option>
+                    <option value="Corte Infantil">Corte Infantil - 12€</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Notas o Preferencia de Horario (Opcional)</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej. Prefiero por las tardes..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Reserva</button>
+        </form>
+
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+    </div>
+
+</body>
+
+</html>
