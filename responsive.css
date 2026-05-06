@@ -436,3 +436,16 @@
         /* El espacio justo para que no tape nada */
     }
 }
+@media screen and (max-width: 768px) {
+
+    /* Quitamos el límite de 160px para que la foto ocupe todo su espacio */
+    .corte-image-wrapper {
+        max-width: 100% !important;
+    }
+
+    /* Forzamos a la imagen a estirarse al máximo del contenedor que tiene asignado */
+    .corte-img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
