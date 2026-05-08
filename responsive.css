@@ -449,3 +449,27 @@
         height: auto !important;
     }
 }
+/* --- DAR VIDA A LAS IMÁGENES DE LA PELUQUERÍA EN MÓVIL --- */
+@media (max-width: 768px) {
+    /* Atacamos la imagen principal del hero (donde sale el corte) */
+    .service-hero-image img, .barber-mockup img {
+        height: 60vh !important; /* Forzamos a que ocupe el 60% de la altura de la pantalla */
+        object-fit: cover !important; /* Enmarca la foto perfectamente sin estirarla */
+        object-position: top center !important; /* Asegura que se vea bien la cara y el pelo */
+        width: 100% !important;
+        
+        /* Añadimos un pequeño borde sutil para darle clase */
+        border: 2px solid #a67c52; /* El color dorado/marrón del logo */
+        border-radius: 10px; /* Bordes suaves */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra suave para que destaque */
+    }
+
+    /* Le damos vida a las fotos de la galería o de la lista de servicios */
+    .service-list-image, .service-gallery-item img {
+        margin-top: 10px !important;
+        border-radius: 8px !important;
+        
+        /* Un efecto micro de "breathe" al scroll (muy sutil) */
+        transition: transform 0.3s ease-out;
+    }
+}
