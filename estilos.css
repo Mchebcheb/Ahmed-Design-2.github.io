@@ -480,7 +480,7 @@ h1 span {
     opacity: 0.95;
 }
 
-/* --- SECCIÓN CONTACTO COMPACTA --- */
+/* --- SECCIÓN CONTACTO MEJORADA (MÁS ANCHA EN PC) --- */
 .contacto-section {
     padding: 80px 20px !important;
     background-color: #e7e2e2 !important;
@@ -490,10 +490,14 @@ h1 span {
 
 .contacto-container {
     width: 100% !important;
-    max-width: 550px !important;
-    /* Limita el ancho para que ocupe menos pantalla */
+    /* AQUÍ ESTÁ EL CAMBIO: Subimos de 550px a 900px para que respire */
+    max-width: 900px !important; 
     text-align: center !important;
 }
+
+/* Para que el formulario no sea una línea infinita, 
+   podemos hacer que los campos no ocupen todo el ancho si tú quieres,
+   pero con 900px se verá mucho más profesional en PC */
 
 .contacto-subtitle {
     display: block !important;
@@ -501,18 +505,17 @@ h1 span {
     text-transform: uppercase !important;
     letter-spacing: 2px !important;
     color: #c5a880 !important;
-    /* Tono dorado/barbería */
     margin-bottom: 10px !important;
 }
 
 .contacto-title {
-    font-size: 2.2rem !important;
+    font-size: 2.8rem !important; /* Un pelín más grande para acompañar el ancho */
     margin: 0 0 15px 0 !important;
     color: #111111 !important;
 }
 
 .contacto-description {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     color: #666666 !important;
     margin-bottom: 40px !important;
     line-height: 1.6 !important;
@@ -521,13 +524,16 @@ h1 span {
 /* Estilos del formulario */
 .contacto-form {
     text-align: left !important;
-    /* Los campos alineados a la izquierda */
+    /* Centramos el formulario dentro del contenedor estirado */
+    max-width: 800px !important;
+    margin: 0 auto !important;
 }
 
 .contacto-group {
     margin-bottom: 20px !important;
 }
 
+/* El resto de tus estilos (inputs, botones, etc.) están perfectos */
 .contacto-group label {
     display: block !important;
     font-size: 0.85rem !important;
@@ -539,7 +545,7 @@ h1 span {
 .contacto-form input,
 .contacto-form textarea {
     width: 100% !important;
-    padding: 12px 15px !important;
+    padding: 15px !important; /* Un poco más de padding para que se vea premium */
     border: 1px solid #e0e0e0 !important;
     border-radius: 6px !important;
     box-sizing: border-box !important;
@@ -548,31 +554,20 @@ h1 span {
     transition: border-color 0.3s ease !important;
 }
 
-.contacto-form input:focus,
-.contacto-form textarea:focus {
-    outline: none !important;
-    border-color: #1a1a1a !important;
-    background-color: #ffffff !important;
-}
-
-/* Botón de envío */
 .btn-contacto {
     width: 100% !important;
+    max-width: 300px !important; /* El botón no necesita ser tan gigante */
+    display: block !important;
+    margin: 30px auto 0 !important; /* Centramos el botón */
     background-color: #1a1a1a !important;
     color: #ffffff !important;
     border: none !important;
-    padding: 14px !important;
+    padding: 16px !important;
     font-size: 1rem !important;
     font-weight: bold !important;
     border-radius: 6px !important;
     cursor: pointer !important;
     transition: background-color 0.3s ease, transform 0.2s ease !important;
-}
-
-.btn-contacto:hover {
-    background-color: #c5a880 !important;
-    /* Cambio de color al pasar el cursor */
-    transform: translateY(-2px) !important;
 }
 
 /* --- ESTILOS DEL FOOTER GENERAL --- */
